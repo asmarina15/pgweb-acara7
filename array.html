@@ -30,16 +30,17 @@
       var marker = L.marker([-7.76591, 110.37742]).addTo(map);
       marker.bindPopup("Universitas Gadjah Mada").openPopup();
 
-      var marker = L.marker([-7.7713847, 110.3774998]).addTo(map);
-      marker.bindPopup("Universitas Negeri Yogyakarta").openPopup();
-
       // Array Marker
       var locations = [
-        ["LOCATION_1", 11.8166, 122.0942],
-        ["LOCATION_2", 11.9804, 121.9189],
-        ["LOCATION_3", 10.7202, 122.5621],
-        ["LOCATION_4", 11.3889, 122.6277],
-        ["LOCATION_5", 10.5929, 122.6325],
+        ["Universitas Gadjah Mada", -7.76591, 110.37742],
+        ["Pantai Depok", -8.01330727350644, 110.29142929945264],
+        ["Kopi Merapi Kaliurang", -7.598312957392991, 110.46362558600839],
+        [
+          "Ekowisata Sungai Mudal Kulonprogo",
+          -7.762632873506177,
+          110.11679559564784,
+        ],
+        ["Gua Pindul", -7.924307633411827, 110.64110394773971],
       ];
       for (var i = 0; i < locations.length; i++) {
         marker = new L.marker([locations[i][1], locations[i][2]])
@@ -61,7 +62,7 @@
       function onMapClick(e) {
         popup
           .setLatLng(e.latlng)
-          .setContent("Ini koordinat " + e.latlng.toString())
+          .setContent("Koordinat" + e.latlng.toString())
           .openOn(map);
       }
 
